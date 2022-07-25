@@ -60,5 +60,7 @@ function removeItem(e) {
     itemlist.removeChild(li)
     array.pop(itemlist)
     console.log(array)
-    none.innerHTML = 'Jusu krepselis tuscias';
+    if (array == 0) {
+        none.innerHTML = 'Jusu krepselis tuscias';
+    }
 }
