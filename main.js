@@ -49,6 +49,7 @@ function additem(e) {
 
     if (none == true) {
         none.document.querySelector('.shoplist_is-empty').style.display = 'none';
+        console.log(none)
     }
     array.push(itemlist)
     console.log(array)
@@ -59,4 +60,6 @@ function removeItem(e) {
     // if (e.classlist.contains('delete'))
     let li = e.target.parentElement;
     itemlist.removeChild(li)
+    array.pop(itemlist)
+    console.log(array)
 }
