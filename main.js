@@ -7,7 +7,7 @@ let iteminput = document.querySelector('input[type="text"]')
 
 const form = document.querySelector('.form')
 const itemlist = document.getElementById('shop_list')
-
+none.innerHTML = "krepselis tuscias"
 //form submit event
 form.addEventListener('submit', additem);
 
@@ -40,6 +40,7 @@ function additem(e) {
 
     //apend text node
     deleteBtn.appendChild(document.createTextNode('Pasalinti'))
+    none.innerHTML = '';
 
     //apend button to li
     li.appendChild(deleteBtn)
@@ -47,10 +48,7 @@ function additem(e) {
     //apend li to list
     itemlist.appendChild(li);
 
-    if (none == true) {
-        none.document.querySelector('.shoplist_is-empty').style.display = 'none';
-        console.log(none)
-    }
+
     array.push(itemlist)
     console.log(array)
 }
@@ -62,4 +60,5 @@ function removeItem(e) {
     itemlist.removeChild(li)
     array.pop(itemlist)
     console.log(array)
+    none.innerHTML = 'Jusu krepselis tuscias';
 }
