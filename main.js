@@ -47,12 +47,11 @@ function additem(e) {
     //apend li to list
     itemlist.appendChild(li);
 
-    if (itemlist == true) {
-        none.document.querySelector('shoplist_is-empty').style.display = '';
+    if (none == true) {
+        none.document.querySelector('.shoplist_is-empty').style.display = 'none';
     }
-    array.from(itemlist).foreach(function (item) {
-        let itemname = item.firstChild.textContent;
-    })
+    array.push(itemlist)
+    console.log(array)
 }
 
 //Delete items
