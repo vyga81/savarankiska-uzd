@@ -48,7 +48,7 @@ function additem(e) {
     itemlist.appendChild(li);
 
     if (itemlist == true) {
-        none.document.querySelector('shoplist_is-empty').style.display = 'none';
+        none.document.querySelector('shoplist_is-empty').style.display = '';
     }
     array.from(itemlist).foreach(function (item) {
         let itemname = item.firstChild.textContent;
@@ -58,6 +58,6 @@ function additem(e) {
 //Delete items
 function removeItem(e) {
     // if (e.classlist.contains('delete'))
-    var li = e.target.parentElement;
+    let li = e.target.parentElement;
     itemlist.removeChild(li)
 }
